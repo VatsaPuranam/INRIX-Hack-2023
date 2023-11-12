@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Errand Optimizer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header-bar">
+      <h1>Errand Optimizer</h1>
+      <div class="route-inputs">
+        <input
+          type="text"
+          id="starting-location"
+          class="location-bars"
+          placeholder="Enter Starting Location"
+        />
+        <button id="round-trip-button">Click For Round Trip</button>
+        <input
+          type="text"
+          id="ending-location"
+          class="location-bars"
+          placeholder="Enter Final Location"
+        />
+      </div>
+    </div>
+
+    <!-- List of errands -->
+    <div class="errand-list" id="errandList">
+      <!-- Errand items will be appended here -->
+    </div>
+    <div class="content-container">
+      <div class="table-and-button-container">
+        <div class="table-container">
+          <table id="errandTable">
+            <thead>
+              <tr>
+                <th>Errand</th>
+                <th>To Do</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Get Gas</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="errand-checkbox"
+                    id="gas-checkbox" 
+                    data-errand="Get Gas"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Get Groceries</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="errand-checkbox"
+                    id="groceries-checkbox" 
+                    data-errand="Get Groceries"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Get Coffee</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="errand-checkbox"
+                    id="coffee-checkbox" 
+                    data-errand="Get Coffee"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Get ATM</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    class="errand-checkbox"
+                    id="atm-checkbox" 
+                    data-errand="Get ATM"
+                  />
+                </td>
+              </tr>
+              <!-- Add more errands as needed -->
+            </tbody>
+          </table>
+        </div>
+        <button id="optimizeButton">Optimize Errands</button>
+        
+          <!-- Your table and optimize button here -->
+      </div>
+      <div class="map-container">
+          <div id="map"></div>
+      </div>
+  </div>
+
+    <!-- Optimize button -->
+    
+    <div id="map"></div>
+
+    
+
+    <script src="script.js"></script>
+    <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6PBPaKmp9NxAjSy745SIH-Tp4wo1Oc68&libraries=places&callback=initMapAndAutocomplete">
+</script>
+
+<!-- <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMapAndAutocomplete">
+</script> -->
+<!-- <script src="/map.js"></script>
+<script src="/script.js"></script> -->
+
+  </body>
+</html>
